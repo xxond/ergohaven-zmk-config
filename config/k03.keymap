@@ -62,11 +62,11 @@
 
         adj {
             bindings = <
-&bootloader  &trans  &trans              &trans        &trans         &trans                    &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4  &bt BT_CLR_ALL
-&trans       &trans  &trans              &kp LA(UP)    &trans         &trans                    &trans        &kp LA(MINUS)     &trans            &kp LA(EQUAL)     &trans        &studio_unlock
-&trans       &trans  &kp LA(LEFT_ARROW)  &kp LA(DOWN)  &kp LA(RIGHT)  &trans                    &out OUT_BLE  &kp LA(NUMBER_4)  &kp LA(NUMBER_5)  &kp LA(NUMBER_6)  &trans        &trans
-&trans       &trans  &trans              &trans        &trans         &trans  &trans    &trans  &out OUT_USB  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &trans        &trans
-                     &trans              &trans        &trans         &trans  &trans    &trans  &trans        &trans            &trans            &trans
+&bootloader  &trans  &trans                      &trans                &trans                 &trans                    &bt BT_SEL 0  &bt BT_SEL 1              &bt BT_SEL 2              &bt BT_SEL 3              &bt BT_SEL 4  &bt BT_CLR_ALL
+&trans       &trans  &kp LA(LG(LC(MINUS)))       &kp LA(LG(LC(UP)))    &kp LA(LG(LC(EQUAL)))  &trans                    &trans        &kp LA(LG(LC(NUMBER_7)))  &kp LA(LG(LC(NUMBER_8)))  &kp LA(LG(LC(NUMBER_9)))  &trans        &studio_unlock
+&trans       &trans  &kp LA(LG(LC(LEFT_ARROW)))  &kp LA(LG(LC(DOWN)))  &kp LA(LG(LC(RIGHT)))  &trans                    &out OUT_BLE  &kp LA(LG(LC(NUMBER_4)))  &kp LA(LG(LC(NUMBER_5)))  &kp LA(LG(LC(NUMBER_6)))  &trans        &trans
+&trans       &trans  &trans                      &trans                &trans                 &trans  &trans    &trans  &out OUT_USB  &kp LA(LG(LC(NUMBER_1)))  &kp LA(LG(LC(NUMBER_2)))  &kp LA(LG(LC(NUMBER_3)))  &trans        &trans
+                     &trans                      &trans                &trans                 &trans  &trans    &trans  &trans        &trans                    &trans                    &trans
             >;
 
             display-name = "Adjust";
