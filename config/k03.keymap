@@ -10,6 +10,54 @@
 
 / {
     behaviors {
+        ws1: workspace_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LA(N1)))>, <&kp N1>;
+            mods = <(MOD_LCTL | MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL)>;
+        };
+
+        ws2: workspace_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LA(N2)))>, <&kp N2>;
+            mods = <(MOD_LCTL | MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL)>;
+        };
+
+        ws3: workspace_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LA(N3)))>, <&kp N3>;
+            mods = <(MOD_LCTL | MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL)>;
+        };
+
+        ws4: workspace_4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LA(N4)))>, <&kp N4>;
+            mods = <(MOD_LCTL | MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL)>;
+        };
+
+        ws5: workspace_5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LA(N5)))>, <&kp N5>;
+            mods = <(MOD_LCTL | MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL)>;
+        };
+
+        ws6: workspace_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LA(N6)))>, <&kp N6>;
+            mods = <(MOD_LCTL | MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL | MOD_RCTL)>;
+        };
+
         enc_vol: enc_vol {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_VOL";
@@ -84,9 +132,9 @@
             bindings = <
 &none      &none  &none               &none               &none               &none                        &none  &none  &none  &none  &none  &none
 &to 0      &none  &none               &none               &none               &kp LC(PG_UP)                &none  &none  &none  &none  &none  &none
-&none      &none  &kp LC(LG(LA(N4)))  &kp LC(LG(LA(N5)))  &kp LC(LG(LA(N6)))  &kp LC(PG_DN)                &none  &none  &none  &none  &none  &none
-&kp LSHFT  &none  &kp LC(LG(LA(N1)))  &kp LC(LG(LA(N2)))  &kp LC(LG(LA(N3)))  &none          &to 0  &none  &none  &none  &none  &none  &none  &none
-                  &none               &none               &none               &mo WINDOWS    &none  &none  &none  &none  &none  &none
+&none      &none  &ws4               &ws5               &ws6               &kp LC(PG_DN)                &none  &none  &none  &none  &none  &none
+&kp LSHFT  &none  &ws1               &ws2               &ws3               &none          &to 0  &none  &none  &none  &none  &none  &none  &none
+                  &none               &none               &kp LCTRL           &mo WINDOWS    &none  &none  &none  &none  &none  &none
             >;
         };
 
@@ -97,7 +145,7 @@
 &to 0      &none  &none         &kp LG(UP)    &none          &kp LC(PG_UP)                &none  &none  &none  &none  &none  &none
 &none      &none  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LC(PG_DN)                &none  &none  &none  &none  &none  &none
 &kp LSHFT  &none  &none         &none         &none          &none          &to 0  &none  &none  &none  &none  &none  &none  &none
-                  &none         &none         &none          &mo WINDOWS    &none  &none  &none  &none  &none  &none
+                  &none         &none         &kp LCTRL      &mo WINDOWS    &none  &none  &none  &none  &none  &none
             >;
         };
     };

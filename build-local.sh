@@ -23,6 +23,10 @@ docker run --rm \
       -DZMK_CONFIG=/work/config \
       -DSHIELD=k03_left \
       -DCONFIG_ZMK_STUDIO=y
+    west build -p auto -s zmk/app -d /work/build-right -b ergohaven -- \
+      -DZMK_CONFIG=/work/config \
+      -DSHIELD=k03_right
     cp /work/build-left/zephyr/zmk.uf2 /output/k03_left-ergohaven-zmk.uf2
-    sha256sum /output/k03_left-ergohaven-zmk.uf2
+    cp /work/build-right/zephyr/zmk.uf2 /output/k03_right-ergohaven-zmk.uf2
+    sha256sum /output/k03_left-ergohaven-zmk.uf2 /output/k03_right-ergohaven-zmk.uf2
   '
