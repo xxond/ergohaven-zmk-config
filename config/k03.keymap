@@ -142,8 +142,8 @@
             display-name = "Windows";
             bindings = <
 &none      &none  &none         &none         &none          &none                        &none  &none  &none  &none  &none  &none
-&to 0      &none  &none         &kp LG(UP)    &none          &kp LC(PG_UP)                &none  &none  &none  &none  &none  &none
-&none      &none  &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LC(PG_DN)                &none  &none  &none  &none  &none  &none
+&to 0      &none  &none                         &kp LA(LG(LC(UP)))    &none                  &kp LC(PG_UP)                &none  &none  &none  &none  &none  &none
+&none      &none  &kp LA(LG(LC(LEFT_ARROW)))     &kp LA(LG(LC(DOWN)))  &kp LA(LG(LC(RIGHT)))  &kp LC(PG_DN)                &none  &none  &none  &none  &none  &none
 &kp LSHFT  &none  &none         &none         &none          &none          &to 0  &none  &none  &none  &none  &none  &none  &none
                   &none         &none         &kp LCTRL      &mo WINDOWS    &none  &none  &none  &none  &none  &none
             >;
