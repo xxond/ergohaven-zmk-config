@@ -4,7 +4,7 @@ set -euo pipefail
 repo_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 mkdir -p "$repo_dir/build/.work"
 
-docker run --rm \
+docker run --rm --network host \
   --mount "type=bind,src=$repo_dir/config,dst=/config,readonly" \
   --mount "type=bind,src=$repo_dir/build/.work,dst=/work" \
   --mount "type=bind,src=$repo_dir/build,dst=/output" \
